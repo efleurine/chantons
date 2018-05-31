@@ -11,6 +11,7 @@ import {
   Text,
   View
 } from 'react-native';
+import SplashScreen from 'react-native-smart-splash-screen'
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -21,6 +22,14 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  componentDidMount () {
+    //SplashScreen.close(SplashScreen.animationType.scale, 850, 500)
+    SplashScreen.close({
+      animationType: SplashScreen.animationType.scale,
+      duration: 850,
+      delay: 500,
+    })
+}
   render() {
     return (
       <View style={styles.container}>

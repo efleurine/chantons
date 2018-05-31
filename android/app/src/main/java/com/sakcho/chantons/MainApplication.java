@@ -2,6 +2,7 @@ package com.sakcho.chantons;
 
 import android.app.Application;
 
+import com.reactnativecomponent.splashscreen.RCTSplashScreenPackage;  
 import com.facebook.react.ReactApplication;
 import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
 import com.microsoft.appcenter.reactnative.analytics.AppCenterReactNativeAnalyticsPackage;
@@ -28,7 +29,8 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
             new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
-            new AppCenterReactNativePackage(MainApplication.this)
+            new AppCenterReactNativePackage(MainApplication.this),
+            new RCTSplashScreenPackage()
       );
     }
 
