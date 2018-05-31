@@ -1,4 +1,4 @@
-rootProject.name = 'ChantonsavecEsperance'
+rootProject.name = 'Chantons'
 include ':appcenter-crashes'
 project(':appcenter-crashes').projectDir = new File(rootProject.projectDir, '../node_modules/appcenter-crashes/android')
 include ':appcenter-analytics'
