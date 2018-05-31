@@ -1,4 +1,4 @@
-package com.mobile;
+package com.sakcho.chantons;
 
 import android.app.Application;
 
