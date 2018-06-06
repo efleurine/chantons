@@ -2,7 +2,7 @@
   "presets": ["react-native"],
   "env": {
     "development": {
-      "plugins": ["transform-react-jsx-source"]
+      "plugins": ["transform-decorators-legacy", "transform-react-jsx-source"]
     }
   }
 }

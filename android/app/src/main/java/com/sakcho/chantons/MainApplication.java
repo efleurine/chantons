@@ -1,9 +1,10 @@
 package com.sakcho.chantons;
 
-import android.app.Application;
+import android.support.multidex.MultiDexApplication;
 
-import com.reactnativecomponent.splashscreen.RCTSplashScreenPackage;  
+import com.reactnativecomponent.splashscreen.RCTSplashScreenPackage;
 import com.facebook.react.ReactApplication;
+import guichaguri.trackplayer.TrackPlayer;
 import com.amazonaws.RNAWSCognitoPackage;
 import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
 import com.microsoft.appcenter.reactnative.analytics.AppCenterReactNativeAnalyticsPackage;
@@ -16,7 +17,7 @@ import com.facebook.soloader.SoLoader;
 import java.util.Arrays;
 import java.util.List;
 
-public class MainApplication extends Application implements ReactApplication {
+public class MainApplication extends MultiDexApplication implements ReactApplication {
 
   private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {
     @Override
@@ -26,14 +27,12 @@ public class MainApplication extends Application implements ReactApplication {
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(
-          new MainReactPackage(),
-            new RNAWSCognitoPackage(),
-            new AppCenterReactNativeCrashesPackage(MainApplication.this, getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
-            new AppCenterReactNativeAnalyticsPackage(MainApplication.this, getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
-            new AppCenterReactNativePackage(MainApplication.this),
-            new RCTSplashScreenPackage()
-      );
+      return Arrays.<ReactPackage>asList(new MainReactPackage(), new TrackPlayer(), new RNAWSCognitoPackage(),
+          new AppCenterReactNativeCrashesPackage(MainApplication.this,
+              getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
+          new AppCenterReactNativeAnalyticsPackage(MainApplication.this,
+              getResources().getString(R.string.appCenterAnalytics_whenToEnableAnalytics)),
+          new AppCenterReactNativePackage(MainApplication.this), new RCTSplashScreenPackage());
     }
 
     @Override
