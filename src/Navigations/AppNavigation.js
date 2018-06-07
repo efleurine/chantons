@@ -1,11 +1,46 @@
-import { createStackNavigator } from "react-navigation";
+import { createStackNavigator, createSwitchNavigator } from "react-navigation";
 
-import TestScreen from "../Containers/TestScreen";
+import WelcomeScreen from "../Containers/Welcome";
+import PresentationScreen from "../Containers/PresentationScreen";
+import RegistrationScreen from "../Containers/RegistrationScreen";
+import MainScreen from "../Containers/MainScreen";
 
-const TestStack = createStackNavigator({
-  Test: {
-    screen: TestScreen
+const WelcomeStack = createStackNavigator(
+  {
+    Welcome: {
+      screen: WelcomeScreen
+    },
+    Presentation: {
+      screen: PresentationScreen
+    },
+    Registration: {
+      screen: RegistrationScreen
+    }
+  },
+  {
+    initialRouteName: "Welcome",
+    headerMode: "none"
+  }
+);
+
+const MainStack = createStackNavigator({
+  Main: {
+    screen: MainScreen
   }
 });
 
-export default TestStack;
+const SwitchNavigator = createSwitchNavigator(
+  {
+    WelcomeStack,
+    MainStack
+  },
+  {
+    initialRouteName: "WelcomeStack",
+    headerMode: "none"
+  }
+);
+
+/**
+ * I will need a
+ */
+export default SwitchNavigator;
