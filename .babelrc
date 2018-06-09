@@ -1,8 +1,12 @@
 {
   "presets": ["react-native"],
+  "plugins": ["transform-decorators-legacy", "transform-react-jsx-source"],
   "env": {
     "development": {
-      "plugins": ["transform-decorators-legacy", "transform-react-jsx-source"]
+      "plugins": []
+    },
+    "production": {
+      "plugins": ["react-native-paper/babel"]
     }
   }
 }
