@@ -1,6 +1,7 @@
 import React from "react";
 import Amplify from "aws-amplify";
 import SplashScreen from "react-native-smart-splash-screen";
+import { Provider as PaperProvider } from "react-native-paper";
 
 import awsConfig from "../../aws-exports";
 import RootContainer from "../Containers/RootContainer";
@@ -27,6 +28,10 @@ export default class App extends React.Component {
   }
 
   render() {
-    return <RootContainer />;
+    return (
+      <PaperProvider>
+        <RootContainer />
+      </PaperProvider>
+    );
   }
 }
