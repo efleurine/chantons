@@ -18,7 +18,7 @@ const WelcomeStack = createStackNavigator(
     }
   },
   {
-    initialRouteName: "Welcome",
+    initialRouteName: "Registration",
     headerMode: "none"
   }
 );
