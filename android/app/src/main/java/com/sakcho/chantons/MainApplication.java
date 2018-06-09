@@ -4,6 +4,7 @@ import android.support.multidex.MultiDexApplication;
 
 import com.reactnativecomponent.splashscreen.RCTSplashScreenPackage;
 import com.facebook.react.ReactApplication;
+import com.oblador.vectoricons.VectorIconsPackage;
 import guichaguri.trackplayer.TrackPlayer;
 import com.amazonaws.RNAWSCognitoPackage;
 import com.microsoft.appcenter.reactnative.crashes.AppCenterReactNativeCrashesPackage;
@@ -27,7 +28,8 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
 
     @Override
     protected List<ReactPackage> getPackages() {
-      return Arrays.<ReactPackage>asList(new MainReactPackage(), new TrackPlayer(), new RNAWSCognitoPackage(),
+      return Arrays.<ReactPackage>asList(new MainReactPackage(), new VectorIconsPackage(), new TrackPlayer(),
+          new RNAWSCognitoPackage(),
           new AppCenterReactNativeCrashesPackage(MainApplication.this,
               getResources().getString(R.string.appCenterCrashes_whenToSendCrashes)),
           new AppCenterReactNativeAnalyticsPackage(MainApplication.this,
@@ -50,5 +52,7 @@ public class MainApplication extends MultiDexApplication implements ReactApplica
   public void onCreate() {
     super.onCreate();
     SoLoader.init(this, /* native exopackage */ false);
+    // FacebookSdk.sdkInitialize(getApplicationContext());
+    // AppEventsLogger.activateApp(getApplicationContext());
   }
 }
