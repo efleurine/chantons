@@ -40,6 +40,7 @@ allprojects {
  + Project-wide Gradle configuration properties
  */
 ext {
+    minSdkVersion       = 19
     compileSdkVersion   = 27
     targetSdkVersion    = 27
     buildToolsVersion   = '27.0.3'

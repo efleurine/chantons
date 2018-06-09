@@ -2,4 +2,6 @@
     <string name="app_name">Chantons</string>
     <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true">ALWAYS_SEND</string>
     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true">ALWAYS_SEND</string>
+    <string name="facebook_app_id">1688927578103174</string>
+    <string name="fb_login_protocol_scheme">fb1688927578103174</string>
 </resources>

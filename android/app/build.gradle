@@ -98,8 +98,8 @@ android {
     
     defaultConfig {
         applicationId "com.sakcho.chantons"
-        minSdkVersion 19
-        targetSdkVersion 27
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1
         versionName "1.0"
         ndk {
@@ -148,10 +148,6 @@ android {
 }
 
 dependencies {
-    // implementation project(':react-native-fbsdk')
-    // implementation "com.facebook.android:facebook-android-sdk:[4,5)"
-    // implementation "com.facebook.android:facebook-login:[4,5)"
-
     implementation project(':react-native-vector-icons')
     implementation 'com.android.support:multidex:1.0.3'
     implementation project(':amazon-cognito-identity-js')
