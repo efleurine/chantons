@@ -21,12 +21,8 @@ Chanter est un art et les variations possibles d'une chanson sont nombreuses. De
 
 Ainsi donc cette application offrira d'une part à ceux et celles qui ont l'art de chanter l'opportunité d'interpréter une chanson et d'en faire profiter leurs frères et soeurs chrétiens. D'autre part les utilisateurs pourront écouter gratuitement les chansons ses interprétations, apprendre ses chansons etc.
 
-### Modèle économique.
 
-Ce projet n'est pas à but lucratif en soit. Aussi partager et écouter une chanson se ferront toujours gratuitement. Pour supporter le projet vue qu'il y aura un coût en hébergement et développement, il y aura un minimum d'espace publicitaire le moins intrusif que possible. Et pour continuer à faire vivre ce livre, une partie des revenues seront versées à la Presse Évangélique pour soutenir la production du receuil.
-
-
-### Why open source?
+### Why putting it on github?
 
 L'initiateur de l'application est un membre du Facebook Developer Circle Port-au-Prince et veut partager principalement avec sa communauté les codes sources, comme une manière pour développer une application avec React Native, AWS Mobile Hub pour soutenir le back-end et GraphQl, ainsi que diverses autres  approche.
 
