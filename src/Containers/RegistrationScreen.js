@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { View } from "react-native";
+import { ScrollView } from "react-native";
 import PropTypes from "prop-types";
 
 // This screen will make the interface with AWS service for the registration
 // Will will use the data provided and pass function to the underling implementation
-// import Signin from "../Components/Signin";
-// import Signup from "../Components/Signup";
+import Signin from "../Components/Signin";
+import Signup from "../Components/Signup";
 import ResetPassword from "../Components/ResetPassword";
 
 export default class RegistrationScreen extends Component {
@@ -20,15 +20,15 @@ export default class RegistrationScreen extends Component {
   state = {
     // can be either signup or // signin
   };
-  componentDidMount() {
-    console.log("Registration screen was mounted");
-  }
+  componentDidMount() {}
 
   render() {
     return (
-      <View>
+      <ScrollView>
+        <Signup />
+        <Signin />
         <ResetPassword />
-      </View>
+      </ScrollView>
     );
   }
 }

@@ -5,9 +5,7 @@ export default class PresentationScreen extends Component {
   static navigationOptions = {
     title: "Presentation"
   };
-  componentDidMount() {
-    console.log("Presentation Screen was mounted");
-  }
+  componentDidMount() {}
 
   render() {
     return (

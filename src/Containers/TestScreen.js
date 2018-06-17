@@ -11,9 +11,7 @@ class TestScreen extends React.Component {
     title: "Test Space"
   };
 
-  componentDidMount() {
-    console.log("test screen has been mounted");
-  }
+  componentDidMount() {}
 
   togglePlayback = async () => {
     const currentTrack = await TrackPlayer.getCurrentTrack();

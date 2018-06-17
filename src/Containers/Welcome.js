@@ -12,7 +12,6 @@ class WelcomeScreen extends Component {
   };
 
   componentDidMount() {
-    console.log("First time screen is mounted");
     setTimeout(() => this.props.navigation.navigate("Registration"), 2000);
   }
 

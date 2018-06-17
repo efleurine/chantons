@@ -6,9 +6,7 @@ class MainScreen extends Component {
     title: "Main"
   };
 
-  componentDidMount() {
-    console.log("Main screen is mounted");
-  }
+  componentDidMount() {}
 
   render() {
     return (

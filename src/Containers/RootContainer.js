@@ -4,9 +4,7 @@ import AppNavigation from "../Navigations/AppNavigation";
 // import TestScreen from "../Containers/TestScreen";
 
 export default class RootContainer extends React.Component {
-  componentDidMount() {
-    console.log("root container was mounted");
-  }
+  componentDidMount() {}
   render() {
     return (
       <View style={styles.container}>
