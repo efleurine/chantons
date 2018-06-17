@@ -1,5 +1,10 @@
 import * as AWSAuth from "../Helpers/AWSAuth";
 
+/**
+ *
+ * @param The user  email for the resistration
+ * @param The user password
+ */
 export async function signup(email, password) {
   return AWSAuth.signup(email, password);
 }
@@ -20,11 +25,11 @@ export async function changePassword(oldPassword, newPassword) {
   return AWSAuth.changePassword(oldPassword, newPassword);
 }
 
-export async function startResetPassword(email) {
+export async function sendResetCode(email) {
   return AWSAuth.startResetPassword(email);
 }
 
-export async function completeResetPassword(email, code, newPassword) {
+export async function resetPasswordWithCode(email, code, newPassword) {
   return AWSAuth.completeResetPassword(email, code, newPassword);
 }
 

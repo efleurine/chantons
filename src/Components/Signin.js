@@ -5,6 +5,7 @@ import PropTypes from "prop-types";
 
 import EmailInput from "./EmailInput";
 import PasswordInput from "./PasswordInput";
+import { signin } from "../Services/AuthServices";
 
 export default class Signin extends Component {
   static propTypes = {
@@ -43,10 +44,17 @@ export default class Signin extends Component {
     }
   };
 
-  login = () => {
-    console.log("login button was pressed");
-    console.log(this.email, this.password);
+  login = async () => {
     // success go to homepage -- error clean and show error message
+    const resp = await signin(this.email, this.password);
+
+    if (resp && resp._hasFailed) {
+      console.log("login failed");
+      console.log(resp);
+      return;
+    }
+    console.log("login was a success");
+    console.log(resp);
   };
 
   render() {
