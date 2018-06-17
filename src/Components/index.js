@@ -4,6 +4,9 @@ import PasswordInput from "./PasswordInput";
 import Text from "./Text";
 import ResetPassword from "./ResetPassword";
 import NumberInput from "./NumberInput";
+import Link from "./Link";
+import withHOC from "./HOC";
+import RenderProp from "./RenderProp";
 
 export {
   Container,
@@ -11,5 +14,8 @@ export {
   PasswordInput,
   Text,
   ResetPassword,
-  NumberInput
+  NumberInput,
+  Link,
+  withHOC,
+  RenderProp
 };
