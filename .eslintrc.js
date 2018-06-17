@@ -44,6 +44,8 @@ module.exports = {
     "no-confusing-arrow": 0,
     "react/jsx-filename-extension": 0,
     "no-console": 0,
-    "prettier/prettier": "error"
+    "react/forbid-prop-types": 0,
+    "prettier/prettier": "error",
+    "react/prefer-stateless-function": [1, { ignorePureComponents: true }]
   }
 };
